@@ -1,16 +1,14 @@
-# 概要
-実力試しと勉強とポートフォリオがてらTwitterの模擬アプリを作ります
+# DB & Frameworks
+Client: React \
+Server: NestJS \
+DB: dynamodb
 
-## 技術選定
-クライアントサイド: React \
-サーバーサイド: NestJS \
-データベース: mysql, dynamodb
-
-## インフラ
+# infrastructure
 GithubActions, AWS ECS, Terraform
 
 
-# 環境構築
+# Usage
+The following command starts the server and database.
 
 ```
 make build
