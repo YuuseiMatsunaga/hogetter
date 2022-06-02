@@ -2,6 +2,8 @@
 title db設計
 
 object tweets {
+    mysql
+    --
     id: string
     user_id: string
     created_at: datetime
@@ -11,18 +13,24 @@ object tweets {
 }
 
 object timelines {
+    dynamodb
+    --
     user_id: string
     post_date: string
-    contenat: json
+    tweet_id: string
 }
 
 object conversationthreads {
-    tweet_id: string
+    dynamodb
+    --
+    parent_tweet_id: string
     post_date: string
-    content: json
+    child_tweet_id: json
 }
 
 object users {
+    mysql
+    --
     id: string
     name: string
     screen_name: string
@@ -33,6 +41,8 @@ object users {
 }
 
 object follows {
+    mysql
+    --
     follow_id: string
     follower_id: string
 }

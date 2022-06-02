@@ -11,6 +11,14 @@ userがログイン, 認証できるようにする \
 プロフィール画面でユーザーの編集と自分の投稿一覧が見れる
 
 ## Detail Design
+
+### create tweet
 tweet, reply共にtweetsテーブルに入れる \
-読み込みはtimelinesとconversationthreads, 書き込みはtweetsとusersにする \
-tweetが作成された時dynamodb streamとlambdaでtimelines or conversationthreadsにitem作成する
+tweetが作成された時フォロワーの数timelinesにpushする
+
+### timeline
+timelineを表示させる際timelinesを取り出してtweetをアタッチしてクライアントに返す
+
+### conversationthreads
+timelineと同じ
+conversationthredsを取り出してtweetをアタッチする
