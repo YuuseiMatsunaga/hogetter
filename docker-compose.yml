@@ -10,6 +10,14 @@ services:
       - type: bind
         source: ./backend
         target: /myapp
+  dynamodb-local:
+    image: amazon/dynamodb-local:latest
+    user: root
+    command: -jar DynamoDBLocal.jar -sharedDb -dbPath /data
+    volumes:
+      - dynamodb-local-data:/data
+    ports:
+      - 8000:8000
   mysql:
     image: mysql/mysql-server:5.7
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
@@ -28,7 +36,7 @@ services:
       - NODE_ENV=development
     volumes:
       - ./frontend:/usr/src/app
-    command: sh -c 'npm install && npm run start:dev'
+    command: sh -c 'npm install && npm run start'
     ports:
       - '13000:3000'
     tty: true
@@ -48,3 +56,5 @@ services:
     image: redis:latest
     ports:
       - 6379:6379
+volumes:
+  dynamodb-local-data:
