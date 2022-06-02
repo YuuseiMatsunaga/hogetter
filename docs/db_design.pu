@@ -1,7 +1,7 @@
 @startuml db
 title db設計
 
-object tweets {
+object tweet {
     mysql
     --
     id: string
@@ -12,15 +12,15 @@ object tweets {
     retweet_count: number
 }
 
-object timelines {
+object timeline {
     dynamodb
     --
     user_id: string
     post_date: string
-    tweet_id: string
+    tweet_id: stri
 }
 
-object conversationthreads {
+object conversationthread {
     dynamodb
     --
     parent_tweet_id: string
@@ -28,7 +28,7 @@ object conversationthreads {
     child_tweet_id: json
 }
 
-object users {
+object user {
     mysql
     --
     id: string
@@ -40,7 +40,7 @@ object users {
     description: string
 }
 
-object follows {
+object follow {
     mysql
     --
     follow_id: string
