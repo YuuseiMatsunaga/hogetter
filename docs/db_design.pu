@@ -33,11 +33,12 @@ object user {
     --
     id: string
     name: string
+    email: string
+    password: string
     screen_name: string
-    introduction: json(user_introduction)
-    created_at: datetime
     followers_count: number
     description: string
+    created_at: datetime
 }
 
 object follow {
