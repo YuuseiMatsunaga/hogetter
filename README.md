@@ -1,11 +1,10 @@
 # DB & Frameworks
 Client: React \
 Server: NestJS \
-DB: dynamodb
+DB: dynamodb, mysql
 
 # infrastructure
 GithubActions, AWS ECS, Terraform
-
 
 # Usage
 The following command starts the server and database.

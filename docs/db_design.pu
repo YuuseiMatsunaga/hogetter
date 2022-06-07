@@ -1,0 +1,51 @@
+@startuml db
+title db設計
+
+object tweet {
+    mysql
+    --
+    id: string
+    user_id: string
+    created_at: datetime
+    text: string
+    reply_count: number
+    retweet_count: number
+}
+
+object timeline {
+    dynamodb
+    --
+    user_id: string
+    post_date: string
+    tweet_id: stri
+}
+
+object conversationthread {
+    dynamodb
+    --
+    parent_tweet_id: string
+    post_date: string
+    child_tweet_id: json
+}
+
+object user {
+    mysql
+    --
+    id: string
+    name: string
+    email: string
+    password: string
+    screen_name: string
+    followers_count: number
+    description: string
+    created_at: datetime
+}
+
+object follow {
+    mysql
+    --
+    follow_id: string
+    follower_id: string
+}
+
+@enduml
