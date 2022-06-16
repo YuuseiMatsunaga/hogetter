@@ -5,7 +5,7 @@ services:
     tty: true
     command: sh -c "npm install && npm run start:dev"
     ports:
-      - "15000:3000"
+      - "5000:3000"
     volumes:
       - type: bind
         source: ./backend
@@ -38,7 +38,7 @@ services:
       - ./frontend:/usr/src/app
     command: sh -c 'npm install && npm run dev'
     ports:
-      - '13000:3000'
+      - '3000:3000'
     tty: true
   nginx:
     build:
