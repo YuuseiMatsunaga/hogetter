@@ -1,5 +1,5 @@
 # DB & Frameworks
-Client: React \
+Client: Next.js \
 Server: NestJS \
 DB: dynamodb, mysql
 
