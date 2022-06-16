@@ -4,7 +4,7 @@ Server: NestJS \
 DB: dynamodb, mysql
 
 # infrastructure
-GithubActions, AWS ECS, Terraform
+GithubActions, AWS, Terraform
 
 # Usage
 The following command starts the server and database.
